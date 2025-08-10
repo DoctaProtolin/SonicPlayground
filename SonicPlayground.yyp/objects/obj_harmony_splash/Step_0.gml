@@ -1,5 +1,9 @@
 	timer++
-		
+    
+    if (keyboard_check(vk_enter)) {
+        fade_to_room(rm_stage_select, 10);
+    }
+
 	if(timer < 240)
 	{
 		for (var i = 0; i < 64; ++i) 

@@ -15,7 +15,7 @@
 	//Go to level select
 	if(keyboard_check_pressed(ord("M")) && !obj_shell.isOpen)
 	{
-		fade_to_room(rm_stage_select, 4);
+        fade_to_room(rm_stage_select, 4);
 		music_set_fade(FADE_OUT, 5);
 	}
 	
@@ -24,15 +24,19 @@
 	
 	if(!obj_shell.isOpen)
 	{
-		if(keyboard_check_pressed(vk_tab)) debug = !debug;
-		if(keyboard_check_pressed(ord("B")) && instance_exists(obj_hud)) obj_hud.render = !obj_hud.render;
-		if(keyboard_check_pressed(ord("T"))) global.title_card = !global.title_card;
-		if(keyboard_check_pressed(vk_f9)) show_collision = !show_collision;
-		if(keyboard_check_pressed(vk_f8)) show_hitbox = !show_hitbox;
-		if(keyboard_check_pressed(vk_f3)) show_fps = !show_fps;
-		if(keyboard_check_pressed(ord("N"))) global.bgm_volume = (global.bgm_volume + 1) mod 2;
-		if(keyboard_check_pressed(vk_f7)) show_player = !show_player;
-		if(keyboard_check_pressed(vk_f2)) 
+        if (keyboard_check_pressed(vk_shift) && instance_exists(obj_player)) {
+            obj_player.x_speed = 0;
+            obj_player.y_speed = 0;
+        }
+		if (keyboard_check_pressed(vk_space)) debug = !debug;
+		if (keyboard_check_pressed(ord("B")) && instance_exists(obj_hud)) obj_hud.render = !obj_hud.render;
+		if (keyboard_check_pressed(ord("T"))) global.title_card = !global.title_card;
+		if (keyboard_check_pressed(vk_f9)) show_collision = !show_collision;
+		if (keyboard_check_pressed(vk_f8)) show_hitbox = !show_hitbox;
+		if (keyboard_check_pressed(vk_f3)) show_fps = !show_fps;
+		if (keyboard_check_pressed(ord("N"))) global.bgm_volume = (global.bgm_volume + 1) mod 2;
+		if (keyboard_check_pressed(vk_f7)) show_player = !show_player;
+		if (keyboard_check_pressed(vk_f2)) 
 		{
 			fade_to_room(room, 5);
 			music_set_fade(FADE_OUT, 5);
@@ -48,6 +52,7 @@
 				
 			}
 		}
+        
 		if(keyboard_check(vk_f6)) room_speed = 5 else room_speed = 60
 	
 		//Stop if player doesn't exist
@@ -61,15 +66,16 @@
 		//Add rings
 		if(keyboard_check(ord("1")))
 		{
-			global.rings++;
+			global.rings ++;
 			play_sound(sfx_ring);
 		}
 		
-		//Give the player extra life
+		//Toggle fullscreen
 		if(keyboard_check_pressed(ord("2")))
 		{
-			global.life++;
-			play_sound(j_extra_life);
+            global.fullscreen = !global.fullscreen;
+			window_resize();
+            show_debug_message("Toggled fullscreen");
 		}
 		
 		//Change shields
@@ -112,7 +118,7 @@
 		}
 		
 		//Toggle teleport
-		if(keyboard_check_pressed(vk_space) && instance_exists(obj_debug_teleport))
+		if(keyboard_check_pressed(vk_tab) && instance_exists(obj_debug_teleport))
 		{
 			var t = instance_find(obj_debug_teleport, teleport_id);
 		

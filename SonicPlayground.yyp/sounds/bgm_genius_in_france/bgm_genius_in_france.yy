@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgm_genius_in_france",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":536.8091,
+  "name":"bgm_genius_in_france",
+  "parent":{
+    "name":"Stage Music",
+    "path":"folders/Sounds/Music/Stage Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgm_genius_in_france.mp3",
+  "type":0,
+  "volume":1.0,
+}

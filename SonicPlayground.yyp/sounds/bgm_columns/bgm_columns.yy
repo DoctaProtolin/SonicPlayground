@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgm_columns",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":55.58823,
+  "name":"bgm_columns",
+  "parent":{
+    "name":"Menu Music",
+    "path":"folders/Sounds/Music/Menu Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgm_columns.ogg",
+  "type":0,
+  "volume":1.0,
+}

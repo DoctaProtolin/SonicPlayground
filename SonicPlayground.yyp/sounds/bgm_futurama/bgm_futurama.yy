@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"bgm_futurama",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":237.93146,
+  "name":"bgm_futurama",
+  "parent":{
+    "name":"Stage Music",
+    "path":"folders/Sounds/Music/Stage Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"bgm_futurama.wav",
+  "type":0,
+  "volume":1.0,
+}

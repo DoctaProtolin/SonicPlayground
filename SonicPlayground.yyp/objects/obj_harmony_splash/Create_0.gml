@@ -1,4 +1,6 @@
-	for (var i = 0; i < 3; ++i) 
+	window_resize();
+    
+    for (var i = 0; i < 3; ++i) 
 	{
 	    logo_surface[i] = surface_create(WINDOW_WIDTH, WINDOW_HEIGHT)
 	}

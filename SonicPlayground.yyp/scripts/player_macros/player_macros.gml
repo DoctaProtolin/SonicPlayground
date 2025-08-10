@@ -18,6 +18,12 @@ function player_macros(){
 	#macro ST_KNUXFALL 14
 	#macro ST_KNUXSLIDE 15
 	#macro ST_DROPDASH 16
+    #macro ST_DRIFT 17
+    #macro ST_FISTBUMP 18
+    #macro ST_WALLDASH 19
+    #macro ST_UPPERCUT 20
+    #macro ST_GRIND 21
+    #macro ST_HANG 22
 	
 	//Animation macros:
 	#macro ANIM_STAND 0
@@ -55,6 +61,12 @@ function player_macros(){
 	#macro ANIM_KNUXLEDGE 32
 	#macro ANIM_KNUXLAND 33
 	#macro ANIM_DROPDASH 34
+    #macro ANIM_UNCROUCH 35
+    #macro ANIM_FISTBUMP 36
+    #macro ANIM_MAXSPINDASH 37
+	#macro ANIM_GRIND 38
+    #macro ANIM_HANG 39
+    #macro ANIM_HANGFAST 40
 	
 	//Shield macros
 	#macro S_NONE -1
@@ -67,9 +79,17 @@ function player_macros(){
 	#macro CHAR_SONIC 0
 	#macro CHAR_TAILS 1
 	#macro CHAR_KNUX 2
+    
+    // Ability
+    #macro MOVE_DISABLE 0
+    #macro MOVE_NORMAL  1
+    #macro MOVE_SHIELD  2
 	
 	//Misc.
 	#macro K_HURT 1
 	#macro K_DIE 2
 	#macro K_DROWN 3
+    
+    #macro FLIP_LEFT -1
+    #macro FLIP_RIGHT 1
 }

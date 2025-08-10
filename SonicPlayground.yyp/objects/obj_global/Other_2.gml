@@ -5,11 +5,19 @@
 	
 	//Character globals
 	global.character = CHAR_SONIC;			//Global value for the character
+	global.unroll    = true;                //Set to true to unroll by pressing up
 	
 	//Screen values
-	global.window_width  = 426;				//Window's horizontal size
-	global.window_height = 240;				//Window's vertical size
-	global.window_size   = 2;				//Window size multiplier
+	global.window_width  = 480;				//Window's horizontal size
+	global.window_height = 270;				//Window's vertical size
+	global.window_size   = 3;				//Window size multiplier
+    global.resolution_index    = 2;
+    global.resolutions         = [
+        [426, 240],          // Mania
+        [480*1.2, 270*1.2],  // Default
+        [640, 360],          //  Large
+    ];
+    global.fullscreen = false;
 	
 	//keyboard inputs
 	global.up = vk_up;						
@@ -36,7 +44,7 @@
 	global.stage_timer = 0;					//Global variable for stage timer
 	global.rings = 0;						//Global variable for rings
 	global.life = 3;						//Global variable for life
-	global.title_card = true;				//Flag that allows title card to be triggered, used in dev
+	global.title_card = false;				//Flag that allows title card to be triggered, used in dev
 	global.emeralds = [false, false, false, false, false, false, false];				//List of active emeralds
 	global.col_tile = ["CollisionMain", "CollisionSemi", "CollisionA", "CollisionB"];	//List of collision layers
 	
@@ -50,12 +58,12 @@
 	global.ring_extralife = 100;			//Ring threshold for extra life
 	
 	//Customizables variables
-	global.rotation_type = 0;				//This changes player's visual rotation 
+	global.rotation_type = 1;				//This changes player's visual rotation 
 	global.use_battery_rings = false;		//If this is disabled, destroying enemies will spawn flickies instead
-	global.chaotix_monitors = false;		//Changes monitor icons to be like chaotix, monitor icon spins and it turns into dust
+	// global.chaotix_monitors = true;		//Changes monitor icons to be like chaotix, monitor icon spins and it turns into dust
 	global.use_peelout = true;				//Flag that allows peel-out ability
-	global.use_dropdash = true;				//Flag that allows dropdash ability
-	global.use_airroll = false;				//Flag that allows rolling while air-borne
+	// global.use_dropdash = true;				//Flag that allows dropdash ability
+	global.use_airroll = true;				//Flag that allows rolling while air-borne
 	global.chaotix_dust_effect = false;		//Flag that disables classic spindash/skid dust effect
 	global.camera_type = 1;					//Vertical camera scrolling type, 0 = Megadrive, 1 = Mania
 	global.knux_camera_smooth = false;		//Flag for using smooth ledge climb camera movement
@@ -67,17 +75,23 @@
 	global.text_random = font_add_sprite_ext(spr_font_random, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.:-!", true, 1);
 	
 	//Create controllers:
-	instance_create_depth(0, 0, 0, obj_window);
+	// instance_create_depth(0, 0, 0, obj_window);
 	instance_create_depth(0, 0, 0, obj_input);
 	instance_create_depth(0, 0, 0, obj_music);
 	instance_create_depth(0, 0, -100, obj_fade);
 	
 	//Controlers for dev mode
-	if(global.dev_mode) 
+	if (global.dev_mode) 
 	{
 		instance_create_depth(0, 0, 0, obj_dev);
 		instance_create_depth(0, 0, 0, obj_shell);
 	}
+
+    // Load settings
+    settings_load();
+
+    // Set view
+    window_resize();
 	
 	//Initilize the music list
 	init_music_list();
