@@ -60,7 +60,7 @@
 	//Customizables variables
 	global.rotation_type = 1;				//This changes player's visual rotation 
 	global.use_battery_rings = false;		//If this is disabled, destroying enemies will spawn flickies instead
-	// global.chaotix_monitors = true;		//Changes monitor icons to be like chaotix, monitor icon spins and it turns into dust
+	global.chaotix_monitors = true;		//Changes monitor icons to be like chaotix, monitor icon spins and it turns into dust
 	global.use_peelout = true;				//Flag that allows peel-out ability
 	// global.use_dropdash = true;				//Flag that allows dropdash ability
 	global.use_airroll = true;				//Flag that allows rolling while air-borne
