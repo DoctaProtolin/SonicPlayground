@@ -34,7 +34,7 @@ function player_collision(){
 		
 
 	//Check landing
-	if(y_speed > 0 && !ground)
+	if(!ground)
 	{
 		if(line_check(hitbox_w, hitbox_h, true) || line_check(-hitbox_w, hitbox_h, true))
 		{
