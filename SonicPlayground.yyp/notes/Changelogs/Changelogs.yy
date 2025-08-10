@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"",
+  "%Name":"Changelogs",
+  "name":"Changelogs",
+  "parent":{
+    "name":"SonicPlayground",
+    "path":"SonicPlayground.yyp",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

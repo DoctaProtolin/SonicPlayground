@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_breathe",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.346281,
+  "name":"sfx_breathe",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Sounds/Sound Effects/Player.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_breathe.ogg",
+  "type":0,
+  "volume":1.0,
+}
