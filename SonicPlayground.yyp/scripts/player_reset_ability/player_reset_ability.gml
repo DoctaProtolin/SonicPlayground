@@ -3,7 +3,7 @@ function player_reset_ability() {
     var has_ability_shield = shield != S_NONE && shield != S_NORMAL;
 	
     // Reset player ability
-    if (ground || state = ST_KNUXCLIMB) {
+    if (ground || state == ST_KNUXCLIMB) {
         ability = has_ability_shield ? MOVE_SHIELD : MOVE_NORMAL;
     }
     

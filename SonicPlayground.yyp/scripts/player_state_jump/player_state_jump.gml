@@ -63,10 +63,11 @@ function player_state_jump(){
 	attacking = true;
 	
 	//Limit the jump when key is released
-	if(!hold_action && y_speed < -jump_release && jump_flag)
+	if(!hold_action && y_speed < -jump_release && jump_flag && exitWeb)
 	{
 		jump_flag = false;
 		y_speed = -jump_release;
+        exitWeb = false;
 	}
 
 	//Change animation

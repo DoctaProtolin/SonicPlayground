@@ -43,6 +43,13 @@
     drift_speed = 0;
     drift_tap = 0;
 
+    tube_index = noone;
+    tube_pos = 0;
+
+    webIndex = noone;
+    webActivateTimer = 10;
+    exitWeb = false;
+
     slam_object = false; // Manages speed of fistbump
 
     //uppercut_timer = 80;

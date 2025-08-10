@@ -1,5 +1,8 @@
 function player_collision(){
 	//Left wall collision
+    
+    if (state == ST_WEB) return;
+    
 	while(point_check(-wall_w, wall_h))
 	{
 		x += y_dir;	
@@ -21,6 +24,8 @@ function player_collision(){
 	{
 		touching_ceiling = true
 	}
+    
+    
 	
 	//Check if player is on the terrain
 	if(line_check(hitbox_w, hitbox_h+16, true) || line_check(0, hitbox_h+16, true) || line_check(-hitbox_w, hitbox_h+16, true))
@@ -31,7 +36,6 @@ function player_collision(){
 	{
 		on_terrain = false;	
 	}
-		
 
 	//Check landing
 	if(!ground)

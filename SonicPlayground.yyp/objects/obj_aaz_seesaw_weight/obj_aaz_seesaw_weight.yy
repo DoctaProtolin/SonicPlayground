@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":null,"propertyId":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Full Solid\"",},
   ],
   "parent":{
-    "name":"Arboreal Agate",
-    "path":"folders/Objects/Stage Objects/Arboreal Agate.yy",
+    "name":"00. Arboreal Agate",
+    "path":"folders/Objects/Stage Objects/00. Arboreal Agate.yy",
   },
   "parentObjectId":{
     "name":"par_solid_object",

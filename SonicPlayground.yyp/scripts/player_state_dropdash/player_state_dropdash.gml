@@ -57,6 +57,7 @@ function player_state_dropdash(){
 	{
 		dropdash_timer = DROPDASH_INIT;
 		state = ST_JUMP;
+        ability = MOVE_NORMAL;
 	}
 	
 	//Land the dropdash

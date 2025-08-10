@@ -17,6 +17,8 @@ function player_states(){
     // Performs checks to reset ability properly
     player_reset_ability();
     
+    player_state_web();
+    
 	//Sonic states:
 	player_state_peelout();
 	player_state_dropdash();
@@ -26,7 +28,7 @@ function player_states(){
     
     
     // Disable gravity for certain Knuckles moves
-    knux_gravity = !array_contains([ST_WALLDASH, ST_KNUXGLIDE, ST_KNUXLEDGE, ST_KNUXCLIMB], state);
+    // knux_gravity = !array_contains([ST_WALLDASH, ST_KNUXGLIDE, ST_KNUXLEDGE, ST_KNUXCLIMB], state);
 	
 	//Knuckles states:
 	player_state_glide();
@@ -42,6 +44,7 @@ function player_states(){
     player_state_lookup();
     player_state_spring();
     player_state_skid();
+    player_state_tube();
     // player_state_drift();
     
 	player_state_knockout();

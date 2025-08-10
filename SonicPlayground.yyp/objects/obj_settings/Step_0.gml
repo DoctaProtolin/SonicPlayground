@@ -18,7 +18,7 @@
         if (offset_y < 0) {
             offset_y = -1000 + 1000/2916 * timer * timer; // Quadratic equation!!! For display animation!!!
             
-            show_debug_message("offset_y: " + string(offset_y) + " timer: " + string(timer));
+            //show_debug_message("offset_y: " + string(offset_y) + " timer: " + string(timer));
             
             offset_y = min(0, offset_y);
             

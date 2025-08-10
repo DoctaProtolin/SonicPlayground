@@ -32,8 +32,6 @@
     }
     last_debug = debug;
 
-    
-	
 	// Include step movement
 	repeat(steps) {
         

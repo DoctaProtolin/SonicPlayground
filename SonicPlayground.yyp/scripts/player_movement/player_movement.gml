@@ -1,12 +1,14 @@
-function player_movement(){	
+function player_movement() {	
+    
 	//Cap the speed
-	x_speed = clamp(x_speed, -max_speed, max_speed);
-	y_speed = clamp(y_speed, -max_speed, max_speed);
-	ground_speed = clamp(ground_speed, -max_speed, max_speed);
+    
+	//x_speed = clamp(x_speed, -max_speed, max_speed);
+	//y_speed = clamp(y_speed, -max_speed, max_speed);
+	//ground_speed = clamp(ground_speed, -max_speed, max_speed);
 	
 
 	//Moving on the angle:
-	if(ground)
+	if (ground)
 	{
 		x_speed = ground_speed * dcos(ground_angle);
 		y_speed = ground_speed * -dsin(ground_angle);

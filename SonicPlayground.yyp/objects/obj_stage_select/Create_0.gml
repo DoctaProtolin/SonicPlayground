@@ -9,6 +9,7 @@
 	
 	zone_list = [
         ["ARBOREAL AGATE", stage_arboreal_agate1, stage_arboreal_agate2],
+        ["TEST", stage_test],
     ];
 	
 	reset_stage_data();
@@ -31,7 +32,7 @@
         "THE POWER OF TEAMWORK",
         "MASTER OF SHADE...",
         "THESE QUOTES ARE ASS IM ADDING MY OWN",
-        "JANET IS ARRIVING.",
+        "ONE JANITOR DOWN",
         "I MAY NOT BE THE SHARPEST HUNK OF CHEESE",
         "I GOT A NEGATIVE NUMBER ON MY SATS",
         "I'M NOT GOOD LOOKING AND I DON'T KNOW HOW TO DANCE",

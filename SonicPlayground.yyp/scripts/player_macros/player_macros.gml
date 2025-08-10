@@ -19,11 +19,10 @@ function player_macros(){
 	#macro ST_KNUXSLIDE 15
 	#macro ST_DROPDASH 16
     #macro ST_DRIFT 17
-    #macro ST_FISTBUMP 18
-    #macro ST_WALLDASH 19
-    #macro ST_UPPERCUT 20
-    #macro ST_GRIND 21
-    #macro ST_HANG 22
+    #macro ST_TUBE 18
+    #macro ST_WEB 19
+    //#macro ST_GRIND 21
+    //#macro ST_HANG 22
 	
 	//Animation macros:
 	#macro ANIM_STAND 0

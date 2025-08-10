@@ -33,7 +33,7 @@ function player_handle_physics(){
 			y_accel = 0.0625;	
 		}
 	}
-	
+    
 	//Multiplier for speed shoes
 	if(speed_shoes_flag) 
 	{
@@ -51,5 +51,9 @@ function player_handle_physics(){
 		
 		//This one isn't a multiplier
 		jump_strength -= 3.0;
+    }
+    
+    if (state == ST_WEB) {
+        friction_speed = 0;
     }
 }
