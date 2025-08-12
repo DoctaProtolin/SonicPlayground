@@ -14,6 +14,11 @@ function player_state_web() {
                 endPoint = getPosVec(other);
                 
                 restLength = getMag(subVec(endPoint, startPoint));
+                
+                webSpeed = {
+                    x: Player.x_speed,
+                    y: Player.y_speed,
+                }
             }
             
             webIndex = web;

@@ -1,5 +1,8 @@
 function player_macros(){
-	//State macros:
+    // Sanity macro:
+	#macro Player obj_player
+    
+    //State macros:
 	#macro ST_NULL -1
 	#macro ST_NORMAL 0
 	#macro ST_JUMP 1

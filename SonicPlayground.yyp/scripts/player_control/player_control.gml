@@ -64,7 +64,7 @@ function player_control(){
 	if(!ground)
 	
 	{	//Handle air drag:
-		if (y_speed > -4 && y_speed < 0)
+		if (y_speed > -4 && y_speed < 0 && global.airDrag)
 		{
 			x_speed -= x_speed / 32;
 		}

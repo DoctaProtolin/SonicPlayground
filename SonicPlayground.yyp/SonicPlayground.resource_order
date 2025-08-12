@@ -282,6 +282,7 @@
     {"name":"bgm_futurama","order":3,"path":"sounds/bgm_futurama/bgm_futurama.yy",},
     {"name":"bgm_genius_in_france","order":4,"path":"sounds/bgm_genius_in_france/bgm_genius_in_france.yy",},
     {"name":"bgm_hill_top1","order":2,"path":"sounds/bgm_hill_top1/bgm_hill_top1.yy",},
+    {"name":"bgm_tune_down","order":5,"path":"sounds/bgm_tune_down/bgm_tune_down.yy",},
     {"name":"j_drowning","order":3,"path":"sounds/j_drowning/j_drowning.yy",},
     {"name":"j_extra_life","order":5,"path":"sounds/j_extra_life/j_extra_life.yy",},
     {"name":"j_game_over","order":4,"path":"sounds/j_game_over/j_game_over.yy",},

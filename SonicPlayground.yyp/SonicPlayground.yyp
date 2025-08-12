@@ -356,6 +356,7 @@
     {"id":{"name":"bgm_genius_in_france","path":"sounds/bgm_genius_in_france/bgm_genius_in_france.yy",},},
     {"id":{"name":"bgm_hill_top1","path":"sounds/bgm_hill_top1/bgm_hill_top1.yy",},},
     {"id":{"name":"bgm_menu","path":"sounds/bgm_menu/bgm_menu.yy",},},
+    {"id":{"name":"bgm_tune_down","path":"sounds/bgm_tune_down/bgm_tune_down.yy",},},
     {"id":{"name":"j_drowning","path":"sounds/j_drowning/j_drowning.yy",},},
     {"id":{"name":"j_extra_life","path":"sounds/j_extra_life/j_extra_life.yy",},},
     {"id":{"name":"j_game_over","path":"sounds/j_game_over/j_game_over.yy",},},

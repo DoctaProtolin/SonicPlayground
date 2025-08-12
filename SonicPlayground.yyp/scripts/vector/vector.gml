@@ -11,10 +11,12 @@ function getMag(v) {
 }
 
 function normalize(v) {
-    v.x /= getMag(v);
-    v.y /= getMag(v);
+    var m = getMag(v);
     
-    return v;
+    return {
+        x: v.x / m,
+        y: v.y / m,
+    }
 }
 
 function addVec(v1, v2) {
@@ -38,9 +40,39 @@ function getPosVec(obj) {
     }
 }
 
+///@description Multiplies a vector by a constant.
+///@param {struct} vector The vector to multiply.
+///@param {number} constant The constant to multiply by.
 function multVec(v, c) {
     return {
         x: v.x * c,
         y: v.y * c,
+    }
+}
+
+function divVec(v, c) {
+    return {
+        x: v.x / c,
+        y: v.y / c,
+    }
+}
+
+function getHeading(v) {
+    return darctan(v.y / v.x);
+}
+
+function getPerpVector(v) {
+    return {
+        x: -v.y,
+        y: v.x,
+    }
+}
+
+// UNTESTED
+
+function rotateVector(v, theta) {
+    return {
+        x: v.x * dcos(theta) - v.y * dsin(theta),
+        y: v.x * dsin(theta) + v.y * dcos(theta),
     }
 }
