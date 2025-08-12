@@ -1,15 +1,16 @@
 
 function player_state_web() {
+    
     webActivateTimer --;
     if (state != ST_WEB) {
         if (press_action && ability == MOVE_NORMAL && !ground && !webActivateTimer) {
             ability = MOVE_DISABLE;
             state = ST_WEB;
+
             
-            show_debug_message("Initializing web");
             var web = instance_create_layer(0, 0, "Objects", Web);
             
-            with web {
+            with (web) {
                 startPoint = getPosVec(WebPoint);
                 endPoint = getPosVec(other);
                 

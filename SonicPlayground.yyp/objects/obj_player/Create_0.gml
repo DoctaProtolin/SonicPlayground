@@ -177,3 +177,6 @@
 	if (instance_exists(obj_titlecard)) {
 		input_disable = true;
 	}
+
+    
+    

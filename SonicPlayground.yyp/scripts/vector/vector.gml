@@ -42,11 +42,11 @@ function getPosVec(obj) {
 
 ///@description Multiplies a vector by a constant.
 ///@param {struct} vector The vector to multiply.
-///@param {number} constant The constant to multiply by.
-function multVec(v, c) {
+///@param {real} constant The constant to multiply by.
+function multVec(vector, constant) {
     return {
-        x: v.x * c,
-        y: v.y * c,
+        x: vector.x * constant,
+        y: vector.y * constant,
     }
 }
 
@@ -58,7 +58,24 @@ function divVec(v, c) {
 }
 
 function getHeading(v) {
-    return darctan(v.y / v.x);
+    var angle = darctan(v.y / v.x);
+    
+    if (v.x < 0) {
+        angle += 180;
+    } else if (v.y < 0) {
+        angle -= 360;
+    }
+    
+    show_debug_message(v.y);
+    
+    return angle;
+}
+
+function createVecPolar(angle, mag) {
+    return {
+        x: dcos(angle) * mag,
+        y: dsin(angle) * mag,
+    }
 }
 
 function getPerpVector(v) {

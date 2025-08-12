@@ -9,3 +9,6 @@
     restLength = 0;
 
     elastic = true;
+
+    testVector = createVec(1, 0);
+    //Angle = 0;
