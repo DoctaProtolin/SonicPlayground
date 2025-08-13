@@ -10,5 +10,5 @@
 
     elastic = true;
 
-    testVector = createVec(1, 0);
-    //Angle = 0;
+    testVector = createVec(0, 1);
+    Angle = 0;

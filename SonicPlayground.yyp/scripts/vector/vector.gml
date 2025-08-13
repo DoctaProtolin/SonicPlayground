@@ -10,6 +10,8 @@ function getMag(v) {
     return sqrt(sqr(v.x) + sqr(v.y));
 }
 
+///@desc Normalizes a given vector
+///@param {id} v The vector in question
 function normalize(v) {
     var m = getMag(v);
     
@@ -19,6 +21,9 @@ function normalize(v) {
     }
 }
 
+///@desc Returns the sum of two vectors
+///@param {id} v1 The first addend
+///@param {id} v2 The second addend
 function addVec(v1, v2) {
     return {
         x: v1.x + v2.x,
@@ -26,6 +31,9 @@ function addVec(v1, v2) {
     };
 }
 
+///@description Returns the difference between two vectors
+///@param {id} v1 The minuend
+///@param {id} v2 The subtrahend
 function subVec(v1, v2) {
     return {
         x: v1.x - v2.x,
@@ -33,6 +41,8 @@ function subVec(v1, v2) {
     };
 }
 
+///@description Returns the position vector of an object
+///@param {id} obj The object in question
 function getPosVec(obj) {
     return {
         x: obj.x,
@@ -40,9 +50,9 @@ function getPosVec(obj) {
     }
 }
 
-///@description Multiplies a vector by a constant.
-///@param {struct} vector The vector to multiply.
-///@param {real} constant The constant to multiply by.
+///@description Multiplies a vector by a constant
+///@param {struct} vector The vector in question
+///@param {real} constant The constant in question
 function multVec(vector, constant) {
     return {
         x: vector.x * constant,
@@ -50,6 +60,9 @@ function multVec(vector, constant) {
     }
 }
 
+///@description Divides a vector by a constant
+///@param {struct} v The vector in question
+///@param {real} c The constant in question
 function divVec(v, c) {
     return {
         x: v.x / c,
@@ -57,24 +70,27 @@ function divVec(v, c) {
     }
 }
 
+///@desc Gets the heading of a given vector
+///@param {struct} v vector in question
 function getHeading(v) {
     var angle = darctan(v.y / v.x);
     
     if (v.x < 0) {
         angle += 180;
     } else if (v.y < 0) {
-        angle -= 360;
+        angle += 360;
     }
-    
-    show_debug_message(v.y);
     
     return angle;
 }
 
-function createVecPolar(angle, mag) {
+///@desc Creates a vector from polar coordinates
+///@param {real} r The magnitude of the vector
+///@param {real} theta The angle of the vector
+function createVecPolar(r, theta) {
     return {
-        x: dcos(angle) * mag,
-        y: dsin(angle) * mag,
+        x: dcos(theta) * r,
+        y: dsin(theta) * r,
     }
 }
 
@@ -86,7 +102,6 @@ function getPerpVector(v) {
 }
 
 // UNTESTED
-
 function rotateVector(v, theta) {
     return {
         x: v.x * dcos(theta) - v.y * dsin(theta),

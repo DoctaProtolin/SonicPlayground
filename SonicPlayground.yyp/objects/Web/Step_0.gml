@@ -2,7 +2,7 @@
     var angle = getHeading(testVector);
     
     angle += 2;
-    //show_debug_message(angle);
+    show_debug_message(angle);
     testVector = createVecPolar(angle, getMag(testVector));   
 
     if (obj_player.debug) {
