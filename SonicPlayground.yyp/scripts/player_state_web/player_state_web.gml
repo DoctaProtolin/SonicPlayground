@@ -16,10 +16,8 @@ function player_state_web() {
                 
                 restLength = getMag(subVec(endPoint, startPoint));
                 
-                webSpeed = {
-                    x: Player.x_speed,
-                    y: Player.y_speed,
-                }
+                angle = getHeading(subVec(endPoint, startPoint));
+                angularSpeed = sqrt(sqr(Player.x_speed) + sqr(Player.y_speed));
             }
             
             webIndex = web;

@@ -3,12 +3,10 @@
 
     startPoint = {x: 0, y: 0};
     endPoint   = {x: 0, y: 0};
-    
-    webSpeed = 0;    
-
+  
     restLength = 0;
 
-    elastic = true;
+    angle = 0;
+    angularSpeed = 0;
 
-    testVector = createVec(0, 1);
-    Angle = 0;
+    _g = 0.2187;
